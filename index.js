@@ -12,12 +12,11 @@ app.use(express.json())
 app.use('/', indexRoute)
 
 const start = async() => {
-    const url = 'mongodb+srv://Dru1DD:v55PkyKqOXjir274@cluster0.bwimu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
     try {
-        await mongoose.connect(url, {
+        await mongoose.connect(process.env.MONGODB_URI, {
             useUnifiedTopology: true,
             useNewUrlParser: true,
-            useFindAndModify: false
+            useFindAndModify: true
         })
 
         app.listen(PORT, () => {
