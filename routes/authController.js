@@ -1,5 +1,8 @@
 const User = require('../model/User')
+const ListOfDiagrams = require('../model/ListOfDiagrams')
 const bcrypt = require('bcryptjs');
+
+
 // const jwt = require('jsonwebtoken');
 const { validationResult } = require('express-validator')
 // const {secret} = require("../config/config")
@@ -51,7 +54,6 @@ class authController {
             res.status(400).json({message: 'Login error'})
         }
     }
-
     async getUsers(req, res) {
         try {
             const users = await User.find()
