@@ -22,6 +22,7 @@ const Segment = new Schema({
 
 // Схема Диаграмы
 const Diagrama = new Schema ({
+    countOfParts: Number,
     mainSegment: {
         color: String
     },

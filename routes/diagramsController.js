@@ -6,6 +6,7 @@ class diagramsController {
             const { email } = req.body
             // let diagramList = await ListOfDiagrams.findOne({ email })
             const diag = {
+                countOfParts: req.body.countOfParts,
                 mainSegment: req.body.mainSegment,
                 anotherSegments: req.body.anotherSegments
             }
