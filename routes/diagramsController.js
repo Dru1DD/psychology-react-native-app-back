@@ -44,6 +44,16 @@ class diagramsController {
             res.status(400).json({message: "Ошибка получения данных"})
         }
     }
+    async getDiag (req, res) {
+        try {
+            const { email } = req.body
+            const diag = await ListOfDiagrams.find({ email })
+            res.json(diag)
+        } catch(e) {
+            console.log(e)
+            res.status(400).json({ message: "Не удалось получить список выполненых тестов для данного пользователя"})
+        }
+    }
 }
 
 module.exports = new diagramsController()

@@ -22,6 +22,8 @@ router.post('/diagrams', diagramsController.saveDiagrams)
 
 router.get('/diagrams', diagramsController.getDiagrams)
 
+router.get('/diagram', diagramsController.getDiag)
+
 router.get('/users', controller.getUsers)
 
 router.get('/user', controller.getUser)
