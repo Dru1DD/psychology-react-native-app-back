@@ -72,6 +72,22 @@ class authController {
             console.log(e)
         }
     }
+
+    async passwordChange (req, res) {
+        try {
+            const { email, password } = req.body
+
+            const hashPassword = bcrypt.hashSync(password, 7)
+
+            const user = await User.findOneAndUpdate({ email }, {
+                password: hashPassword
+            })
+            await user.save()
+            res.status(200).json({message: "SUCCESS"})
+        } catch (e) {
+            console.log(e)
+        }
+    }
 }
 
 module.exports = new authController()

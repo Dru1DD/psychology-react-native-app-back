@@ -18,6 +18,8 @@ router.post('/registration', [
     check('password', "Пароль должен быть не меньше 4 символов и меньше 16 символов").isLength({min: 4, max: 16})
 ], controller.registration)
 
+router.post('/password', controller.passwordChange)
+
 router.post('/diagrams', diagramsController.saveDiagrams)
 
 router.get('/diagrams', diagramsController.getDiagrams)
