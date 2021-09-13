@@ -24,7 +24,8 @@ const Segment = new Schema({
 const Diagrama = new Schema ({
     countOfParts: Number,
     mainSegment: {
-        color: String
+        color: String,
+        problem: String
     },
     anotherSegments: [Segment]
 })

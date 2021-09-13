@@ -14,7 +14,7 @@ app.use('/', indexRoute)
 // process.env.MONGODB_URI
 const start = async() => {
     try {
-        await mongoose.connect(process.env.MONGODB_URI, {
+        await mongoose.connect("mongodb+srv://Dru1DD:v55PkyKqOXjir274@cluster0.bwimu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
             useUnifiedTopology: true,
             useNewUrlParser: true,
             useFindAndModify: false,

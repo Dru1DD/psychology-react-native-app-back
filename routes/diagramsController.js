@@ -25,9 +25,6 @@ class diagramsController {
             } else {
                 await diagrams.save()
             }
-            // console.log(diagramListNew)
-            
-            // await diagramListNew.save()
             res.status(200).json({message: "SUCCESS"})
         } catch(e) {
             console.log(e)
