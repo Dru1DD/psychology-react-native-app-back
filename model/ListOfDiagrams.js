@@ -25,7 +25,8 @@ const Diagrama = new Schema ({
     countOfParts: Number,
     mainSegment: {
         color: String,
-        problem: String
+        problem: String,
+        colorWithoutProblem: String
     },
     anotherSegments: [Segment]
 })
