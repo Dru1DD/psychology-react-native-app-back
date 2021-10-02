@@ -10,8 +10,8 @@ const app = express()
 app.use(express.json())
 
 app.use('/', indexRoute)
-// mongodb+srv://Dru1DD:v55PkyKqOXjir274@cluster0.bwimu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
-// process.env.MONGODB_URI
+
+// Можно поменять ссылку на mongodb
 const start = async() => {
     try {
         await mongoose.connect(process.env.MONGODB_URI, {

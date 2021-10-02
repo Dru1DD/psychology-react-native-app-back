@@ -14,6 +14,8 @@ const { validationResult } = require('express-validator')
 //     return jwt.sign(payload, secret, {expiresIn: "24h"} )
 // }
 
+// Контроллер для пользователей
+
 class authController {
     async registration(req, res) {
         try {
